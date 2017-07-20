@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ImageEditor
 //
-//  Created by Sergiy Sobol on 12.07.17.
+//  Created by Sergiy Sobol on 21.07.17.
 //  Copyright © 2017 Sergiy Sobol. All rights reserved.
 //
 

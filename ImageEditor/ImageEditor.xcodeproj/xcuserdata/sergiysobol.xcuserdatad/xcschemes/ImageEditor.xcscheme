@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DD82F711F16C259002DC00D"
+               BlueprintIdentifier = "7D6539A21F2162F700DA3A15"
                BuildableName = "ImageEditor.app"
                BlueprintName = "ImageEditor"
                ReferencedContainer = "container:ImageEditor.xcodeproj">
@@ -26,14 +26,13 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DD82F881F16C259002DC00D"
+               BlueprintIdentifier = "7D6539B91F2162F700DA3A15"
                BuildableName = "ImageEditorTests.xctest"
                BlueprintName = "ImageEditorTests"
                ReferencedContainer = "container:ImageEditor.xcodeproj">
@@ -43,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7DD82F931F16C259002DC00D"
+               BlueprintIdentifier = "7D6539C41F2162F700DA3A15"
                BuildableName = "ImageEditorUITests.xctest"
                BlueprintName = "ImageEditorUITests"
                ReferencedContainer = "container:ImageEditor.xcodeproj">
@@ -53,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7DD82F711F16C259002DC00D"
+            BlueprintIdentifier = "7D6539A21F2162F700DA3A15"
             BuildableName = "ImageEditor.app"
             BlueprintName = "ImageEditor"
             ReferencedContainer = "container:ImageEditor.xcodeproj">
@@ -66,7 +65,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -77,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7DD82F711F16C259002DC00D"
+            BlueprintIdentifier = "7D6539A21F2162F700DA3A15"
             BuildableName = "ImageEditor.app"
             BlueprintName = "ImageEditor"
             ReferencedContainer = "container:ImageEditor.xcodeproj">
@@ -96,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7DD82F711F16C259002DC00D"
+            BlueprintIdentifier = "7D6539A21F2162F700DA3A15"
             BuildableName = "ImageEditor.app"
             BlueprintName = "ImageEditor"
             ReferencedContainer = "container:ImageEditor.xcodeproj">
