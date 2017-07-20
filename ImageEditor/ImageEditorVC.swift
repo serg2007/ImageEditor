@@ -77,7 +77,7 @@ class ImageEditorVC: UIViewController {
     }
     
     @objc func filterButtonTapped(sender: UIButton) {
-//        let button = sender as UIButton
+        let button = sender as UIButton
         let filter = SSColorClampFilter()
 //        let filter2 = SSDiscBlurFilter(radius: 6)
 
