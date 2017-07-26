@@ -20,6 +20,12 @@
 		7DAFD4711F2789B0009944F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4701F2789B0009944F9 /* ViewController.swift */; };
 		7DAFD4721F2789B0009944F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4701F2789B0009944F9 /* ViewController.swift */; };
 		7DAFD4731F2789B0009944F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4701F2789B0009944F9 /* ViewController.swift */; };
+		7DAFD4751F27CA7C009944F9 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4741F27CA7C009944F9 /* GalleryVC.swift */; };
+		7DAFD4761F27CA7C009944F9 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4741F27CA7C009944F9 /* GalleryVC.swift */; };
+		7DAFD4771F27CA7C009944F9 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4741F27CA7C009944F9 /* GalleryVC.swift */; };
+		7DAFD4791F27E534009944F9 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4781F27E534009944F9 /* GalleryCollectionViewCell.swift */; };
+		7DAFD47A1F27E534009944F9 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4781F27E534009944F9 /* GalleryCollectionViewCell.swift */; };
+		7DAFD47B1F27E534009944F9 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAFD4781F27E534009944F9 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,8 @@
 		7D6539CB1F2162F700DA3A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DAFD4631F27895A009944F9 /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DraggableView.swift; path = Views/DraggableView.swift; sourceTree = "<group>"; };
 		7DAFD4701F2789B0009944F9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7DAFD4741F27CA7C009944F9 /* GalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		7DAFD4781F27E534009944F9 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GalleryCollectionViewCell.swift; path = Views/Cells/GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				7DAFD4631F27895A009944F9 /* DraggableView.swift */,
+				7DAFD4781F27E534009944F9 /* GalleryCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -147,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				7DAFD4701F2789B0009944F9 /* ViewController.swift */,
+				7DAFD4741F27CA7C009944F9 /* GalleryVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -289,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D6539AF1F2162F700DA3A15 /* ImageEditor.xcdatamodeld in Sources */,
+				7DAFD4791F27E534009944F9 /* GalleryCollectionViewCell.swift in Sources */,
+				7DAFD4751F27CA7C009944F9 /* GalleryVC.swift in Sources */,
 				7DAFD4641F27895A009944F9 /* DraggableView.swift in Sources */,
 				7DAFD4711F2789B0009944F9 /* ViewController.swift in Sources */,
 				7D6539A71F2162F700DA3A15 /* AppDelegate.swift in Sources */,
@@ -300,8 +312,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DAFD4721F2789B0009944F9 /* ViewController.swift in Sources */,
+				7DAFD47A1F27E534009944F9 /* GalleryCollectionViewCell.swift in Sources */,
 				7DAFD4651F27895A009944F9 /* DraggableView.swift in Sources */,
 				7D6539BF1F2162F700DA3A15 /* ImageEditorTests.swift in Sources */,
+				7DAFD4761F27CA7C009944F9 /* GalleryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,8 +324,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DAFD4731F2789B0009944F9 /* ViewController.swift in Sources */,
+				7DAFD47B1F27E534009944F9 /* GalleryCollectionViewCell.swift in Sources */,
 				7DAFD4661F27895A009944F9 /* DraggableView.swift in Sources */,
 				7D6539CA1F2162F700DA3A15 /* ImageEditorUITests.swift in Sources */,
+				7DAFD4771F27CA7C009944F9 /* GalleryVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

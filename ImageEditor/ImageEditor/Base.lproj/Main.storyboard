@@ -26,6 +26,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ncl-x6-Fus">
+                                <rect key="frame" x="0.0" y="491" width="375" height="176"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="2ny-QQ-afZ" kind="embed" id="iXN-57-uWH"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -33,6 +40,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--GalleryVC-->
+        <scene sceneID="ZS7-ke-Fdf">
+            <objects>
+                <viewController id="2ny-QQ-afZ" customClass="GalleryVC" customModule="ImageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="961-Ym-qcq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0bZ-50-Y3J">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uOW-j8-i1i">
+                                    <size key="itemSize" width="170" height="170"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="galleryCell" id="Tdj-EG-HhN" customClass="GalleryCollectionViewCell" customModule="ImageEditor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHY-ZV-YTs" customClass="DraggableView" customModule="ImageEditor" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="draggableView" destination="NHY-ZV-YTs" id="BLY-j2-8wV"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2ny-QQ-afZ" id="Sdz-R3-rX5"/>
+                                    <outlet property="delegate" destination="2ny-QQ-afZ" id="DQ9-Gl-a16"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0bZ-50-Y3J" secondAttribute="trailing" id="Rg6-T5-Pfi"/>
+                            <constraint firstItem="0bZ-50-Y3J" firstAttribute="top" secondItem="961-Ym-qcq" secondAttribute="top" id="RmD-uF-Gob"/>
+                            <constraint firstItem="0bZ-50-Y3J" firstAttribute="leading" secondItem="961-Ym-qcq" secondAttribute="leading" id="jow-Rl-1NL"/>
+                            <constraint firstAttribute="bottom" secondItem="0bZ-50-Y3J" secondAttribute="bottom" id="pzD-1b-N8A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photosCv" destination="0bZ-50-Y3J" id="DVw-mr-GWS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f86-IW-qma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="652.17391304347836"/>
         </scene>
     </scenes>
 </document>
