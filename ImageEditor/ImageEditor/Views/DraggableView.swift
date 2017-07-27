@@ -85,4 +85,9 @@ class DraggableView: UIView {
 //        self.transform = .identity
 //        tempTransitionView?.removeFromSuperview()
     }
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        return self
+    }
 }

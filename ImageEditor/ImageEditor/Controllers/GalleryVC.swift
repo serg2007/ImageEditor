@@ -32,7 +32,7 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
                 self.assets.append(asset)
             }
         })
-        
+        self.assets.sort(){$0.creationDate! > $1.creationDate!}
         
         photosCv.reloadData()
     }
@@ -64,7 +64,7 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         return assets.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         let cell = collectionView.cellForItem(at: indexPath) as! GalleryCollectionViewCell
         let frame = UIApplication.shared.keyWindow?.bounds
         tempTransitionView = UIView(frame: frame!)
@@ -80,6 +80,14 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
         
         tempTransitionView?.addSubview(dragableView)
+        var event = UIEvent()
+        dragableView.hitTest(CGPoint.init(x: 0, y: 0), with: event)
+        return true
+
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
 
     }
 }
