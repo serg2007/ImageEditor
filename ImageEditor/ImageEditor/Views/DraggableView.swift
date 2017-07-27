@@ -14,7 +14,25 @@ class DraggableView: UIView {
     var imageView: UIImageView?
     var scale: Double = 1.0
     
-    var tempTransitionView: UIView?
+    
+    init(image: UIImage, frame: CGRect) {
+        super.init(frame: frame)
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(onPan(pan:)))
+        self.addGestureRecognizer(pan)
+        
+        imageView = UIImageView(image: image)
+        imageView?.frame = CGRect(x: 0, y: 0,
+                                  width: (frame.width),
+                                  height: (frame.height))
+        imageView?.contentMode = .scaleAspectFit
+        addSubview(imageView!)
+        backgroundColor = UIColor.red
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print("init(coder:) has not been implemented")
+    }
     
     override func awakeFromNib() {
         let pan = UIPanGestureRecognizer(target: self, action: #selector(onPan(pan:)))
@@ -47,7 +65,6 @@ class DraggableView: UIView {
             self.frame.origin.y = (startFrame?.origin.y)! + dispY
         case .ended:
             self.transform = .identity
-            tempTransitionView?.removeFromSuperview()
         default:
              print(pan.velocity(in: self))
         }
@@ -56,22 +73,12 @@ class DraggableView: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        let frame = UIApplication.shared.keyWindow?.bounds
-        tempTransitionView = UIView(frame: frame!)
-        tempTransitionView?.backgroundColor = UIColor.cyan
-        tempTransitionView?.isExclusiveTouch = true
-        UIApplication.shared.keyWindow?.addSubview(tempTransitionView!)
-        self.frame.origin.y = 500
-//        self.removeFromSuperview()
         
-        tempTransitionView?.addSubview(self)
-
         
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.transform = .identity
-        tempTransitionView?.removeFromSuperview()
     }
     
     override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {

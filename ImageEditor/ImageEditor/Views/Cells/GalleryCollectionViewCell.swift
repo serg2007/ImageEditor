@@ -9,6 +9,6 @@
 import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var draggableView: DraggableView!
+    @IBOutlet weak var mainImg: UIImageView!
     
 }

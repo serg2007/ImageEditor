@@ -45,6 +45,10 @@
         <scene sceneID="ZS7-ke-Fdf">
             <objects>
                 <viewController id="2ny-QQ-afZ" customClass="GalleryVC" customModule="ImageEditor" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="De5-vo-Vpa"/>
+                        <viewControllerLayoutGuide type="bottom" id="s6f-11-D6d"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="961-Ym-qcq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="176"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,15 +70,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NHY-ZV-YTs" customClass="DraggableView" customModule="ImageEditor" customModuleProvider="target">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuU-66-a5l">
                                                     <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </view>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="draggableView" destination="NHY-ZV-YTs" id="BLY-j2-8wV"/>
+                                            <outlet property="mainImg" destination="uuU-66-a5l" id="cxR-2Q-jmE"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
