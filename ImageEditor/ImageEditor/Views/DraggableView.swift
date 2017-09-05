@@ -13,12 +13,12 @@ class DraggableView: UIView {
     var startFrame: CGRect?
     var imageView: UIImageView?
     var scale: Double = 1.0
-    
+    var pan: TestablePanGestureRecognizer?
     
     init(image: UIImage, frame: CGRect) {
         super.init(frame: frame)
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(onPan(pan:)))
-        self.addGestureRecognizer(pan)
+        pan = TestablePanGestureRecognizer(target: self, action: #selector(onPan(pan:)))
+        self.addGestureRecognizer(pan!)
         
         imageView = UIImageView(image: image)
         imageView?.frame = CGRect(x: 0, y: 0,
@@ -35,9 +35,9 @@ class DraggableView: UIView {
     }
     
     override func awakeFromNib() {
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(onPan(pan:)))
-        self.addGestureRecognizer(pan)
-        
+        pan = TestablePanGestureRecognizer(target: self, action: #selector(onPan(pan:)))
+        self.addGestureRecognizer(pan!)
+
         let image = UIImage(named: "priroda_1")
         
         scale = (image?.size.width)! > 200 ? 200 / Double((image?.size.width)!)  : 1.0
@@ -73,10 +73,11 @@ class DraggableView: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        
-        
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("moved")
+    }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.transform = .identity
     }

@@ -69,7 +69,7 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         let frame = UIApplication.shared.keyWindow?.bounds
         tempTransitionView = UIView(frame: frame!)
         tempTransitionView?.backgroundColor = UIColor.cyan
-        tempTransitionView?.isExclusiveTouch = true
+//        tempTransitionView?.isExclusiveTouch = true
         UIApplication.shared.keyWindow?.addSubview(tempTransitionView!)
         let collectionViewAttribute = collectionView.layoutAttributesForItem(at: indexPath)
         let cellRect = collectionViewAttribute?.frame
@@ -80,8 +80,9 @@ class GalleryVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
         
         
         tempTransitionView?.addSubview(dragableView)
-        var event = UIEvent()
-        dragableView.hitTest(CGPoint.init(x: 0, y: 0), with: event)
+        dragableView.becomeFirstResponder()
+//        dragableView.isExclusiveTouch = true
+//        dragableView.pan?.perfomTouch(location: nil, translation: nil, state: .began)
         return true
 
     }

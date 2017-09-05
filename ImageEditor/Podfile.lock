@@ -1,0 +1,21 @@
+PODS:
+  - Alamofire (4.5.0)
+  - AmazonS3RequestManager (1.2.0):
+    - Alamofire (~> 4.1)
+    - SWXMLHash (~> 4.1.0)
+  - Magnetic (1.0.6)
+  - SWXMLHash (4.1.1)
+
+DEPENDENCIES:
+  - AmazonS3RequestManager
+  - Magnetic
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AmazonS3RequestManager: fe0b95154175931b2637303d7a152ef249476362
+  Magnetic: 5d8e4ce3d3e6cf496af1035580971a1d17e966f3
+  SWXMLHash: 2ac748d1b7a429725d5fc99bb1177a685c4b84c7
+
+PODFILE CHECKSUM: c4a58c3df1a631971adaf0cb43a3d168283cc61b
+
+COCOAPODS: 1.2.1
